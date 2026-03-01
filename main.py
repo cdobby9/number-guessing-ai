@@ -1,14 +1,11 @@
 def main():
-    number = int(input("Enter your number: "))
-    previous_numbers = []
-    previous_numbers.append(number)
     lower_bound = 0
     upper_bound = 100
-    if number < lower_bound or number > upper_bound:
-        print("Number is out of bounds.")
+    previous_numbers = []
 
-    while True:
+    while lower_bound <= upper_bound:
         guess = (lower_bound + upper_bound) // 2
+        previous_numbers.append(guess)
         print(f"Is your number {guess}?")
         response = input("Enter 'h' if your number is higher, 'l' if it is lower, or 'c' if it is correct: ")
 
@@ -25,3 +22,4 @@ def main():
 
 while True:
     main()
+    
